@@ -1,4 +1,3 @@
 ls = [int(i) for i in input().split()]
-a = sum(ls)
-print(a)
-
+nm = [int(i) for i in input().split()]
+print(ls[0], nm[0])
