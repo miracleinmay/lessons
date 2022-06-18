@@ -34,22 +34,22 @@
 # Метод принимает на вход новое имя и меняет атрибут имени у oбъекта. Создать один объект класса.
 # Вывести имя. Вызвать метод change_name. Вывести имя.
 
-# class Dog:
+class Dog:
+
+    def __init__(self, name, age, height, weight):
+        self.name = name
+        self.age = age
+        self.height = height
+        self.weight = weight
+
+    def change_name(self, new_name):
+         self.name = new_name
+
 #
-#     def __init__(self, name, age, height, weight):
-#         self.name = name
-#         self.age = age
-#         self.height = height
-#         self.weight = weight
 #
-#     def change_name(self):
-#         new_name = input("Enter the new name: ")
-#         self.name = new_name
-#         return self.name
-#
-#
-# bobik = Dog("Bobik",2,40,15)
-#
-# print(f"The dog's name is {bobik.name}")
-# bobik.change_name()
-# print(f"The dog's name is {bobik.name}")
+bobik = Dog("Bobik",2,40,15)
+
+print(f"The dog's name is {bobik.name}")
+new_name = input("Enter the new name: ")
+bobik.change_name(new_name)
+print(f"The dog's name is {bobik.name}")
