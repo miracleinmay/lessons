@@ -26,7 +26,8 @@ class Pet:
         return f"{self.name} is sleeping!"
 
     def birthday(self):
-        return f"{self.name} has birthday today! It is {self.age + 1} today."
+        self.age += 1
+        return f"{self.name} has birthday today! It is {self.age} today."
 
 
 class Dog(Pet):
