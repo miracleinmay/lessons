@@ -19,7 +19,7 @@ class PositiveAge:
             raise ValueError("The age must pe a positive number!")
         instance.__dict__[self.name] = age
 
-class NameisString:
+class NameOnlyLetters:
     def __set_name__(self, owner, name):
         self.name = name
 
@@ -30,12 +30,12 @@ class NameisString:
         if name.isalpha():
             instance.__dict__[self.name] = name
         else:
-            raise AttributeError("The name must be a string!")
+            raise ValueError("The name must have only letters!")
 
 class Pet:
-    name = NameisString()
+    name = NameOnlyLetters()
     age = PositiveAge()
-    master = NameisString
+    master = NameOnlyLetters()
     def __init__(self, name, age, master):
         self.name = name
         self.age = age
